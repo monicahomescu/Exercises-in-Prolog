@@ -49,21 +49,6 @@ merge_heterolist([H|T], R1):-
 
 
 
-% Same problem with an aditional list result of elements that are not a
-% list.
-
-
-merge_heterolist_modified([], [], []).
-merge_heterolist_modified([H|T], R, [H|N]):-
-    not(is_list(H)),
-    merge_heterolist_modified(T, R, N).
-merge_heterolist_modified([H|T], R1, N):-
-    is_list(H),
-    merge_heterolist_modified(T, R2, N),
-    merge_lists(H, R2, R1).
-
-
-
 %Tests.
 
 
@@ -86,33 +71,3 @@ test_b:-
     R3=[3],
     merge_heterolist([1, [2, 3], 4, 5, [1, 4, 6], 3, [1, 3, 7, 9, 10], 5, [1, 1, 11], 8], R4),
     R4=[1, 2, 3, 4, 6, 7, 9, 10, 11].
-
-
-test_b_modified:-
-    merge_heterolist_modified([], R1, N1),
-    R1=[],
-    N1=[],
-    merge_heterolist_modified([2, 3], R2, N2),
-    R2=[],
-    N2=[2, 3],
-    merge_heterolist_modified([2, [3]], R3, N3),
-    R3=[3],
-    N3=[2],
-    merge_heterolist_modified([1, [2, 3], 4, 5, [1, 4, 6], 3, [1, 3, 7, 9, 10], 5, [1, 1, 11], 8], R4, N4),
-    R4=[1, 2, 3, 4, 6, 7, 9, 10, 11],
-    N4=[1, 4, 5, 3, 5, 8].
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
