@@ -1,7 +1,7 @@
 # Exercises-in-Prolog
 
 Exercise 1\
-a. Write a predicate to substitute in a list a value with all the elements of another list.b. Remove the n-th element of a list.\
+a. Write a predicate to substitute in a list a value with all the elements of another list.\
 b. Remove the n-th element of a list.
 
 Exercise 2\
