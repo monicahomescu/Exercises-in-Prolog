@@ -1,11 +1,11 @@
 # Exercises-in-Prolog
 
-### Exercise 1
+## Exercise 1
 
 a. Write a predicate to test equality of two sets without using the set difference.\
 b. Write a predicate to select the n-th element of a given list.
 
-### Exercise 2
+## Exercise 2
 
 a. Merge two sorted lists with removing the double values.\
 b. For a heterogeneous list, formed from integer numbers and list of numbers, merge all sublists with removing the double values.\
